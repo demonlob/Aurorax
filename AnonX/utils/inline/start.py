@@ -16,10 +16,6 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
         [
             InlineKeyboardButton(
-                text="Hҽʅρ",
-                callback_data="settings_back_helper",
-            ),
-            InlineKeyboardButton(
                 text="Sҽƚƚιɳɠʂ", callback_data="settings_helper"
             ),
         ],
