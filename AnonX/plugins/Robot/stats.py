@@ -29,7 +29,6 @@ from AnonX.utils.inline.stats import (back_stats_buttons,
                                            stats_buttons,
                                            top_ten_stats_markup)
 
-
 loop = asyncio.get_running_loop()
 
 # Commands
@@ -181,9 +180,9 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🔗[Telegram Files and Audios](https://t.me/telegram) ** played {count} times**\n\n"
+                    msg += f"❤️‍🔥[Telegram media](https://t.me/Teamfoxbots) ** played {count} times**\n\n"
                 else:
-                    msg += f"🔗 [{title}](https://www.youtube.com/watch?v={items}) ** played {count} times**\n\n"
+                    msg += f"💓 [{title}](https://www.youtube.com/watch?v={items}) ** played {count} times**\n\n"
 
             temp = (
                 _["gstats_4"].format(
@@ -225,7 +224,7 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
             except:
                 continue
             limit += 1
-            msg += f"🔗`{extract}` played {count} times on bot.\n\n"
+            msg += f"✨`{extract}` played {count} times on bot.\n\n"
         temp = (
             _["gstats_5"].format(limit, MUSIC_BOT_NAME)
             if what == "Chats"
@@ -275,9 +274,9 @@ async def overall_stats(client, CallbackQuery, _):
     cm = config.CLEANMODE_DELETE_MINS
     text = f"""**Bot's Stats and Information:**
 
-**Imported Modules:** {mod}
-**Served Chats:** {served_chats} 
-**Served Users:** {served_users} 
+**Modules:** {mod}
+**Chats:** {served_chats} 
+**Users:** {served_users} 
 **Blocked Users:** {blocked} 
 **Sudo Users:** {sudoers} 
     
@@ -360,7 +359,7 @@ async def overall_stats(client, CallbackQuery, _):
     sudoers = len(await get_sudoers())
     text = f""" **Bot's Stats and Information:**
 
-**Imported Modules:** {mod}
+**Modules:** {mod}
 **Platform:** {sc}
 **Ram:** {ram}
 **Physical Cores:** {p_core}
